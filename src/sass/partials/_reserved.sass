@@ -79,16 +79,18 @@
 		background-size: cover
 		+r(1200)
 			height: auto
-		+r(768)
+		+r(767)
 			width: 100%
 		&_content
 			display: flex
 			width: 100%
-			+r(768)
+			+r(767)
 				flex-direction: column
 		&_img
 			+r(1200)
-				height: 360px
+				height: 480px
+			+r(576)
+				height: 280px
 		&_opacity
 			position: absolute
 			background: rgba(0, 0, 0, 0.8)
@@ -143,7 +145,7 @@
 				font-size: 18px
 				color: $silver
 				margin-bottom: 60px
-				max-height: 125px
+				max-height: 100px
 				overflow: auto
 				+r(576)
 					max-height: 115px

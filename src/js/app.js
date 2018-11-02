@@ -1,6 +1,8 @@
 import $ from 'jquery';
 import '../../node_modules/gsap/src/minified/TweenMax.min';
 import '../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min';
+import  Slick from 'slick-carousel';
+import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min';
 
 $('.scroll-perfect').mCustomScrollbar();
 
@@ -29,4 +31,40 @@ $(window).scroll(function() {
     $('body').css('padding-top', 0);
     $('.header__fixed').removeClass('sticky');
   }
+});
+$(document).ready(function() {
+  $('.gallery__wrapper').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    centerMode: true,
+    centerPadding: '470px',
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    responsive: [
+      {
+        breakpoint: 1880,
+        settings: {
+          centerMode: false,
+          arrows: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          centerMode: false,
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+    ]
+  });
 });

@@ -1,0 +1,158 @@
+.gallery
+	&__wrapper
+		padding: 30px 0 90px
+		+r(1880)
+			padding: 30px 0 40px
+	img
+		width: 960px
+		height: 500px
+		+r(1880)
+			width: 100%
+			max-width: 960px
+			height: auto
+	.slick-slide
+		opacity: 0.2
+		img
+			margin: 0 15px
+			padding:  0 15px
+			+r(1880)
+				margin: 0
+				padding: 0
+	.slick-current
+		opacity: 1
+		position: relative
+		//border: 1px solid $wheat
+		a
+			&::before
+				content: ''
+				position: absolute
+				left: 50px
+				right: 20px
+				top: 20px
+				bottom: 30px
+				background: transparent
+				border: 1px solid $wheat
+				z-index: 9
+				+r(1880)
+					left: 20px
+					right: 20px
+					top: 20px
+					bottom: 20px
+$slick-prev-character: url('../img/arrow.svg') !default;
+$slick-next-character: url('../img/arrow-next.svg') !default;
+.slick-prev,
+.slick-next
+	position: absolute
+	display: block
+	height: 20px
+	width: 20px
+	line-height: 0
+	font-size: 0
+	cursor: pointer
+	background: transparent
+	color: transparent
+	top: 70%
+	margin-top: -10px
+	padding: 0
+	border: none
+	outline: none
+	&:hover, &:focus
+		outline: none
+		background: transparent
+		color: transparent
+		&:before
+			opacity: 0.5
+	&.slick-disabled:before
+		opacity: 0.8
+.slick-prev:before, .slick-next:before
+	font-family: $main-font
+	font-size: 20px
+	line-height: 1
+	color: red
+	opacity: 1
+	left: 50%
+	transform: translateX(-50%)
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+.slick-prev
+	left: 100px
+	z-index: 100
+	[dir="rtl"] &
+		left: auto
+		right: -25px
+	&:before
+		content: $slick-prev-character
+		[dir="rtl"] &
+			content: $slick-next-character
+	&:after
+		content: 'Предыдущий'
+		text-transform: uppercase
+		font-family: $main-font
+		font-size: 12px
+		font-weight: 300
+		color: $silver
+		position: absolute
+		left: 105px
+		bottom: 0
+.slick-next
+	right: 150px
+	z-index: 100
+	[dir="rtl"] &
+		left: -25px
+		right: auto
+	&:before
+		content: $slick-next-character
+		[dir="rtl"] &
+			content: $slick-prev-character
+	&:after
+		content: 'следующий'
+		text-transform: uppercase
+		font-family: $main-font
+		font-size: 12px
+		font-weight: 300
+		color: $silver
+		position: absolute
+		right: 45px
+		bottom: 0
+.slick-dots
+	position: absolute
+	bottom: 22px
+	list-style: none
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 0
+	width: 100%
+	li
+		position: relative
+		display: inline-block
+		cursor: pointer
+		button
+			display: block
+			padding: 0 10px
+			background: none
+			outline: none
+			line-height: 0
+			font-size: 0
+			color: red
+			cursor: pointer
+			&:before
+				content: ""
+				display: block
+				height: 3px
+				width: 3px
+				box-sizing: border-box
+				border-radius: 50%
+				background: $tan
+				transition: all 0.1s ease
+			&:hover
+				&:before
+					height: 3px
+					width: 3px
+					background: $tobacco-brown
+					border: 3px solid $tan
+		&.slick-active button:before
+			background: $tobacco-brown
+			height: 3px
+			width: 3px
+			border: 3px solid $tan
