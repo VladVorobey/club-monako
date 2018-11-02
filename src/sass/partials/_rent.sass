@@ -1,0 +1,191 @@
+.rent
+	padding: 30px 0 60px
+	background: url("../img/elipse.png") center bottom no-repeat
+	background-size: contain
+	+r(768)
+		background-size: cover
+	.gallery__more
+		margin-bottom: 180px
+		+r(768)
+			margin-bottom: 100px
+		+r(576)
+			margin-bottom: 50px
+		h3
+			font-family: $default-font
+			font-weight: 400
+			font-size: 36px
+			color: $tan
+			margin-bottom: 60px
+			+r(768)
+				font-size: 28px
+			+r(576)
+				font-size: 24px
+		&_link
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-bottom: 40px
+			.icon
+				fill: $wheat
+				font-size: 20px
+		a
+			font-family: $main-font
+			font-weight: 400
+			font-size: 20px
+			color: $titan-white
+			vertical-align: middle
+	&__slider
+		padding-bottom: 140px
+		+r(1850)
+			padding-bottom: 90px
+		+r(1620)
+			padding-bottom: 55px
+		&_wrapper
+		&_info
+			h2
+				font-family: $default-font
+				font-weight: 400
+				font-size: 60px
+				text-align: center
+				color: $tan
+				margin-bottom: 45px
+				line-height: 1em
+				position: relative
+				+r(992)
+					font-size: 48px
+				+r(768)
+					font-size: 36px
+				+r(576)
+					font-size: 24px
+					margin-bottom: 30px
+					&::before
+						bottom: -15px
+				&::before
+					content: ''
+					position: absolute
+					width: 200px
+					height: 1px
+					background: $tobacco-brown
+					bottom: -25px
+					left: 50%
+					transform: translateX(-50%)
+			p
+				font-family: $main-font
+				font-weight: 600
+				font-size: 21px
+				text-align: center
+				margin-bottom: 40px
+				line-height: 1.58
+				color: $alto
+				+r(768)
+					font-size: 18px
+					margin-bottom: 40px
+				+r(576)
+					font-size: 16px
+					margin-bottom: 30px
+	&__slide
+		position: relative
+		transition: all .3s ease
+		&_wrapper
+			position: relative
+			margin-bottom: 35px
+			&::before
+				content: ''
+				left: 10px
+				top: 10px
+				right: 30px
+				bottom: 10px
+				position: absolute
+				border: 1px solid $wheat
+				opacity: 1
+				+r(1880)
+					right: 20px
+				+r(1850)
+					right: 10px
+		&_text
+			display: block
+			+r(1620)
+				padding-left: 15px
+			h4
+				font-family: $default-font
+				font-weight: 400
+				font-size: 21px
+				color: $tan
+			p
+				position: relative
+				font-family: $main-font
+				font-weight: 400
+				font-size: 14px
+				color: white
+				padding-left: 70px
+				&::before
+					content: ''
+					position: absolute
+					width: 30px
+					height: 1px
+					background: $tan
+					left: 0
+					top: 50%
+					transform: translateY(-50%)
+				&::after
+					content: ''
+					position: absolute
+					width: 12px
+					height: 12px
+					border: 4px solid $tobacco-brown
+					border-radius: 50%
+					left: 35px
+					top: 50%
+					transform: translateY(-50%)
+		img
+			max-width: 350px
+			max-height: 350px
+			height: auto
+			+r(1850)
+				max-width: none
+				max-height: none
+				width: 100%
+				height: auto
+			+rmin(2000)
+				max-width: none
+				max-height: none
+				width: 100%
+				height: auto
+		&:hover
+			img
+				border: 2px solid #f1d6ac
+			.rent__slide_wrapper
+				&::before
+					opacity: 0
+			.rent__slide_info
+				opacity: 1
+		&_info
+			background: rgba(36, 30, 32, 0.3);
+			display: flex
+			opacity: 0
+			width: 255px
+			height: 255px
+			border-radius: 50%
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+			transition: all .3s ease
+			p
+				font-family: $main-font
+				font-weight: 600
+				font-size: 21px
+				color: $merino
+				span
+					font-size: 24px
+	.slick-active
+		opacity: 1!important
+		.rent__slide_text
+			opacity: 1!important
+	.slick-slide
+		opacity: 0.2
+		.rent__slide_text
+			opacity: 0

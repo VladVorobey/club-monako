@@ -1,0 +1,39 @@
+.advantages
+	&__title
+		h2
+			font-family: $default-font
+			font-weight: 400
+			font-size: 60px
+			color: $tan
+			line-height: 1em
+			position: relative
+			max-width: 480px
+			margin-bottom: 15px
+			letter-spacing: 0.05em
+			&::after
+				content: ''
+				max-width: 300px
+				width: 100%
+				height: 1px
+				background: $tobacco-brown
+				position: absolute
+				right: -300px
+				margin-left: 30px
+				top: 60%
+				transform: translateY(-50%)
+			&::before
+				content: ''
+				width: 18px
+				height: 18px
+				border: 6px solid $tan
+				border-radius: 50%
+				top: 60%
+				transform: translateY(-60%)
+				right: -330px
+				position: absolute
+		p
+			font-family: $main-font
+			font-weight: 600
+			font-size: 21px
+			color: $alto
+			margin-bottom: 55px

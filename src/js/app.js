@@ -67,4 +67,71 @@ $(document).ready(function() {
       },
     ]
   });
+  $('.rent__slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    centerMode: true,
+    centerPadding: '400px',
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 7000,
+    responsive: [
+      {
+        breakpoint: 1620,
+        settings: {
+          centerMode: false,
+          arrows: false,
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          centerMode: false,
+          arrows: false,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          centerMode: false,
+          arrows: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: false,
+          arrows: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 576,
+        settings: {
+          centerMode: false,
+          arrows: false,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+    ]
+  });
 });
