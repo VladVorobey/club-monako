@@ -1,0 +1,159 @@
+.reserved
+	position: relative
+	&__block
+		width: 100%
+		height: 960px
+		position: relative
+		transition: all .3s ease
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		+r(1200)
+			height: 720px
+		+r(576)
+			height: 500px
+		&_opacity
+			position: absolute
+			background: rgba(0, 0, 0, 0.8)
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			transition: all .3s ease
+		&_wrapper
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			align-content: center
+			padding: 30px 30px 130px
+			border: 1px solid $tobacco-brown
+			position: relative
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			height: 95%
+			margin: 23px
+			z-index: 10
+			text-align: center
+			transition: all .3s ease
+			+r(576)
+				padding: 5px 5px 30px
+				height: 92%
+			h2
+				font-family: $default-font
+				font-weight: 400
+				font-size: 48px
+				color: $tan
+				line-height: 1.25em
+				margin-bottom: 20px
+				overflow: hidden
+				max-height: 130px
+				+r(576)
+					max-height: 95px
+					font-size: 36px
+			p
+				font-family: $main-font
+				font-weight: 400
+				font-size: 21px
+				color: $silver
+				margin-bottom: 60px
+				overflow: auto
+				max-height: 140px
+				max-width: none
+				+r(576)
+					max-height: 125px
+					font-size: 18px
+		&:hover
+			.reserved__block_opacity
+				background: rgba(0, 0, 0, 0.6)
+			.reserved__block_wrapper
+				border-color: $wheat
+	&__small-block
+		width: 50%
+		height: 480px
+		position: relative
+		transition: all .3s ease
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		+r(1200)
+			height: auto
+		+r(768)
+			width: 100%
+		&_content
+			display: flex
+			width: 100%
+			+r(768)
+				flex-direction: column
+		&_img
+			+r(1200)
+				height: 360px
+		&_opacity
+			position: absolute
+			background: rgba(0, 0, 0, 0.8)
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			transition: all .3s ease
+		&_border
+			height: 91%
+			margin: 23px
+			border: 1px solid $wheat
+			transition: all .3s ease
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			+r(768)
+				height: 90%
+		&_wrapper
+			position: relative
+			padding: 30px 10px 90px
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			height: 100%
+			max-height:
+			z-index: 10
+			display: flex
+			flex-direction: column
+			justify-content: flex-end
+			text-align: center
+			+r(576)
+				padding: 30px 10px 30px
+
+			h3
+				font-family: $default-font
+				font-weight: 400
+				font-size: 30px
+				color: $tan
+				line-height: 1.25em
+				margin-bottom: 20px
+				overflow: hidden
+				max-height: 115px
+				+r(576)
+					max-height: 95px
+					font-size: 26px
+			p
+				font-family: $main-font
+				font-weight: 400
+				font-size: 18px
+				color: $silver
+				margin-bottom: 60px
+				max-height: 125px
+				overflow: auto
+				+r(576)
+					max-height: 115px
+					font-size: 16px
+					margin-bottom: 30px
+		&:hover
+			.reserved__small-block_border
+				border-color: $wheat
+			.reserved__block_opacity
+				background: rgba(0, 0, 0, 0.2)
+.mCSB_inside
+	.mCSB_container
+		margin-right: 15px

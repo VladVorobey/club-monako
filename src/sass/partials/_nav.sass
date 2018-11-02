@@ -1,0 +1,117 @@
+.nav
+	&__wrapper
+		width: 100%
+		margin: 0
+		padding: 0
+		.overlay
+			top: -200%
+	&__row, &__col
+		margin: 0
+		padding: 0
+		width: 100%
+	&__col
+		height: 100vh
+		&.overlay
+			background: #171213
+			z-index: 1000
+			position: absolute
+			top: -200vh
+	ul
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 100%
+		text-align: center
+		transform: translate(-50%, -50%)
+		margin: 0
+		padding: 0
+		text-transform: uppercase
+		li
+			font-family: $default-font
+			font-size: 20px
+			letter-spacing: 0.01em
+			display: inline-block
+			&:not(:last-child)
+				margin-right: 120px
+			&:first-child
+				&:hover
+					&::before
+						content: ''
+						z-index: 1000
+						width: 300px
+						height: 400px
+						display: block
+						position: absolute
+						top: -180px
+						left: -30px
+						background: url("../img/nav-img-one.jpg")
+						transition: 1s
+						animation: fade-in 2s ease-in-out
+						opacity: 0.3
+			&:nth-child(2)
+				&:hover
+					&::before
+						content: ''
+						z-index: -1
+						width: 300px
+						height: 400px
+						display: block
+						position: absolute
+						top: -180px
+						left: -30px
+						background: url("../img/nav-img-two.jpg")
+						transition: 1s
+						animation: fade-in 2s ease-in-out
+						opacity: 0.3
+			&:nth-child(3)
+				&:hover
+					&::before
+						content: ''
+						z-index: -1
+						width: 300px
+						height: 400px
+						display: block
+						position: absolute
+						top: -180px
+						left: -30px
+						background: url("../img/nav-img-three.jpg")
+						transition: 1s
+						animation: fade-in 2s ease-in-out
+						opacity: 0.3
+			&:nth-child(4)
+				&:hover
+					&::before
+						content: ''
+						z-index: -1
+						width: 300px
+						height: 400px
+						display: block
+						position: absolute
+						top: -180px
+						left: -30px
+						background: url("../img/nav-img-four.jpg")
+						transition: 1s
+						animation: fade-in 2s ease-in-out
+						opacity: 0.3
+			@keyframes fade-in
+				0%
+					opacity: 0
+					top: -160px
+				50%
+					opacity: 0.3
+					top: -180px
+				100%
+					opacity: 0.3
+					top: -180px
+			&:hover, &:focus
+				opacity: 1
+			+r(900)
+				text-align: center
+				display: block!important
+				margin: 0!important
+				padding: 20px 0
+				&:hover
+					&::before
+						width: 0!important
+			a
+				color: white

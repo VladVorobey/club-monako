@@ -1,0 +1,5 @@
+ProjectTitle: monako
+
+PageList:
+- file: index.html
+  ready: 50

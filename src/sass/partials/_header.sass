@@ -1,0 +1,458 @@
+.header
+	position: relative
+	background: url("../img/header-bg.jpg") no-repeat left top
+	background-size: cover
+	&__fixed
+		transition: all .3s ease
+		height: 115px
+		&.sticky
+			background: red
+			position: fixed
+			width: 100%
+			height: auto
+			z-index: 1000
+			top: 0
+			left: 0
+			right: 0
+			background: rgba(18, 14, 14, .8)
+			.header__wrapper
+				height: 70px
+				.logo
+					max-width: 270px
+					strong
+						font-size: 24px
+					p
+						font-size: 12px
+				.tel
+					font-size: 20px
+	&__wrapper
+		position: relative
+		display: flex
+		align-items: center
+		height: 115px
+		justify-content: space-between
+		padding-right: 145px
+		+r(992)
+			padding-right: 120px
+		.logo
+			display: flex
+			width: 370px
+			justify-content: space-between
+			strong
+				font-family: $logo-font
+				font-size: 36px
+				font-weight: 300
+				a
+					color: $whiskey
+
+				+r(576)
+					font-size: 24px
+			p
+				color: white
+				font-family: $main-font
+				font-size: 14px
+				font-weight: 100
+				max-width: 80px
+				line-height: 1.15em
+				+r(576)
+					display: none
+		.tel
+			font-family: $main-font
+			font-weight: 500
+			font-size: 24px
+			a
+				color: white
+				span
+					color: $tan
+			+r(992)
+				font-size: 20px
+			+r(768)
+				display: none
+			&:hover
+				text-decoration: underline
+		.toggle-btn
+			position: absolute
+			display: flex
+			right: 0
+			top: 50%
+			transform: translateY(-50%)
+			width: 100px
+			height: 22px
+			background: transparent
+			cursor: pointer
+			z-index: 1010
+			transition: all 1s ease-in-out
+			&.active
+				.toggle-btn__button
+					span
+						background: #e8cdad
+						&.one
+							width: 20px
+						&.three
+							width: 50px
+
+				&:hover, &:focus
+					.toggle-btn__button
+						span
+							background: #e8cdad
+							&.one
+								width: 50px
+			&:hover, &:focus
+				span
+					&.three
+						width: 50px
+			&__button
+				width: 50%
+				position: relative
+				transition: all 1s ease
+				span
+					position: absolute
+					&.one, &.two, &.three
+						height: 2px
+						background: $tobacco-brown
+
+						transition: all .3s ease
+					&.one
+						top: 0
+						left: 0
+						width: 50px
+					&.two
+						left: 0
+						top: 10px
+						width: 50px
+					&.three
+						top: 20px
+						width: 15px
+						right: 0
+			.menu
+				position: absolute
+				text-transform: uppercase
+				color: white
+				right: 0
+				bottom: 0
+				font-size: 12px
+				font-weight: 400
+				line-height: 0.75em
+	&__main
+		padding-top: 152px
+		padding-bottom: 68px
+		+r(1200)
+			padding-bottom: 100px
+		+r(768)
+			padding-top: 100px
+		+r(576)
+			padding-top: 50px
+		&_title
+			margin-bottom: 33px
+			position: relative
+			+r(576)
+				margin-bottom: 20px
+			&::after
+				content: ''
+				width: 18px
+				height: 18px
+				background-color: $thunder
+				position: absolute
+				right: 0
+				top: 65%
+				border-radius: 50%
+				border: 6px solid $tan
+				transform: translateY(-50%)
+				+r(992)
+					top: 50%
+			&::before
+				content: ''
+				height: 1px
+				width: 300px
+				position: absolute
+				right: 50px
+				top: 65%
+				transform: translateY(-50%)
+				background-color: $tobacco-brown
+				+r(1200)
+					width: 60px
+				+r(992)
+					top: 50%
+					width: 300px
+				+r(425)
+					width: 230px
+			h1
+				font-family: $logo-font
+				font-weight: 300
+				font-size: 116px
+				line-height: 0.8em
+				letter-spacing: 0
+				color: $wheat
+				+r(992)
+					line-height: 0.9em
+				+r(768)
+					font-size: 80px
+				+r(425)
+					font-size: 68px
+		&_sub-title
+			margin-left: 15px
+			margin-bottom: 50px
+			+r(576)
+				margin-left: 0
+				margin-bottom: 30px
+			h2
+				font-family: $main-font
+				font-weight: 500
+				font-size: 26px
+				color: $alto
+				letter-spacing: 0.05em
+				+r(768)
+					font-size: 22px
+				+r(576)
+					font-size: 18px
+		&_info
+			display: flex
+			justify-content: flex-end
+			+r(1200)
+				justify-content: flex-start
+			ul
+				padding: 30px 74px
+				position: relative
+				+r(1200)
+					padding: 30px 50px
+				+r(576)
+					padding: 15px 30px
+				&::after
+					content: ''
+					width: 100px
+					height: 1px
+					background: $tobacco-brown
+					position: absolute
+					right: 0
+					top: 6px
+				li
+					font-family: $main-font
+					font-weight: 300
+					font-size: 21px
+					color: $wheat
+					letter-spacing: 0.01em
+					position: relative
+					+r(576)
+						font-size: 18px
+					&::before
+						content: ''
+						width: 12px
+						height: 6px
+						position: absolute
+						border-left: 1px solid $wheat
+						border-bottom: 1px solid $wheat
+						left: -30px
+						top: 50%
+						transform: translateY(-50%) rotate(-45deg)
+					&:not(:last-child)
+						margin-bottom: 9px
+						+r(576)
+							margin-bottom: 0
+	&__arrow
+		position: absolute
+		bottom: 34px
+		left: 50%
+		transform: translateX(-50%)
+		width: 100%
+		height: 82px
+		cursor: pointer
+		transition: all .5s ease
+		+r(1200)
+			bottom: 15px
+		&_line
+			position: absolute
+			width: 2px
+			height: 49px
+			background: $tobacco-brown
+			left: 50%
+			top: 0
+			transform: translateX(-50%)
+		&_circle
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translateX(-50%)
+			width: 39px
+			height: 39px
+			border-radius: 50%
+			border: 1px solid $tobacco-brown
+		&_marker
+			position: absolute
+			width: 6px
+			height: 6px
+			border-bottom: 1px solid $tobacco-brown
+			border-left: 1px solid $tobacco-brown
+			left: 50%
+			top: 50%
+			transform: translateY(-50%) translateX(-50%) rotate(-45deg)
+		&:hover, &:focus
+			animation: arrow 1s 8 ease
+			@keyframes arrow
+				0%
+					transform: translateY(0) translateX(-50%)
+				50%
+					transform: translateY(5px) translateX(-50%)
+				100%
+					transform: translateY(0) translateX(-50%)
+	&__social
+		position: absolute
+		right: 25px
+		top: 50%
+		transform: translateY(-50%)
+		+r(768)
+			position: relative
+			transform: translateY(0)
+			width: 100%
+			right: 0
+			left: 0
+		.icon
+			fill: $wheat
+			font-size: 24px
+			&:hover
+				fill: white
+		ul
+			margin: 20px 0
+			+r(768)
+				display: flex
+				width: 100%
+				justify-content: center
+				margin: 0
+			li
+				margin-bottom: 15px
+				text-align: center
+				position: relative
+				+r(768)
+					margin: 0 15px 15px
+				a
+					&::before
+						content: ''
+						width: 3px
+						height: 3px
+						border-radius: 50%
+						background: $wheat
+						position: absolute
+						left: 50%
+						top: -12px
+						transform: translateX(-50%)
+						z-index: 1
+						+r(768)
+							display: none
+				&:last-child
+					a
+						&::after
+							content: ''
+							width: 3px
+							height: 3px
+							border-radius: 50%
+							background: $wheat
+							position: absolute
+							left: 50%
+							bottom: -12px
+							transform: translateX(-50%)
+							z-index: 1
+							+r(768)
+								display: none
+.button
+	position: relative
+	display: inline-block
+	max-height: 50px
+	&__header
+		margin-left: 30px
+		margin-bottom: 30px
+		+r(576)
+			margin-left: 10px
+			margin-bottom: 20px
+	&__reserved
+	&::before
+		content: ''
+		width: 30px
+		height: 1px
+		background-color: $tan
+		position: absolute
+		left: -14px
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 10
+	&::after
+		content: ''
+		position: absolute
+		width: 12px
+		height: 12px
+		border-radius: 50%
+		border: 3px solid $tan
+		background-color: $thunder
+		left: 21px
+		top: 50%
+		transform: translateY(-50%)
+		transition: all 0.3s ease
+	&:hover
+		&::before
+			animation: before-transform 0.6s 10 ease
+			@keyframes before-transform
+				0%
+					left: -14px
+				50%
+					left: -18px
+				100%
+					left: -14px
+		&::after
+			//animation: after-transform 0.3s 3 ease
+			//@keyframes after-transform
+			//	0%
+			//		top: 50%
+			//	30%
+			//		top: 45%
+			//	60%
+			//		top: 55%
+			//	100%
+			//		top: 50%
+	a
+		display: inline-block
+		padding: 12px 54px
+		background: transparent
+		text-transform: uppercase
+		overflow: hidden
+		position: relative
+		border: 1px solid $tan
+		span
+			font-size: 16px
+			line-height: 1em
+			text-align: center
+			color: $tan
+			transition: color .3s ease
+			font-family: $main-font
+			font-weight: 600
+			letter-spacing: 0.025em
+		&::before
+			content: ''
+			position: absolute
+			width: 120%
+			height: 600%
+			border-radius: 50%
+			background: $wheat
+			transform: rotate(45deg) translate(-20%, -30%)
+			left: -125%
+			top: 90%
+			z-index: -1
+		&:hover
+			transform: scale(1)
+			span
+				color: $cocoa-brown
+			&::before
+				animation: btn 1s 1
+				top: -10%
+				left: -10%
+		&:focus
+			background: $wheat
+			span
+				color: $cocoa-brown
+	@keyframes btn
+		0%
+			left: -110%
+			top: 90%
+		50%
+			left: 10%
+			top: -30%
+		100%
+			top: -10%
+			left: -10%
